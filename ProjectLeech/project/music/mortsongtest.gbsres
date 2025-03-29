@@ -1,0 +1,9 @@
+{
+  "_resourceType": "music",
+  "id": "7f2a62f0-97a9-4571-a041-b14fe0eb83e1",
+  "name": "mortsongtest",
+  "symbol": "song_mortsongtest",
+  "filename": "mortsongtest.uge",
+  "settings": {},
+  "type": "uge"
+}
