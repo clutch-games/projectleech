@@ -7,9 +7,9 @@
   "symbol": "scene_1",
   "x": 305,
   "y": 166,
-  "width": 150,
-  "height": 72,
-  "backgroundId": "e8041393-2562-4fb5-828f-8431eaae680e",
+  "width": 41,
+  "height": 18,
+  "backgroundId": "f35e0e70-acb7-4738-bb50-5532f858956b",
   "tilesetId": "",
   "paletteIds": [
     "dmg",
@@ -552,6 +552,13 @@
               ]
             },
             "id": "73be050a-afd5-49dc-b561-8633527c6d3a"
+          },
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "7f2a62f0-97a9-4571-a041-b14fe0eb83e1"
+            },
+            "id": "9c3903e0-b918-49be-9a6f-45338a572cea"
           }
         ]
       },
@@ -561,6 +568,6 @@
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],
-  "collisions": "002a30+",
+  "collisions": "0f2a+0026+0f3+0028+0f!0028+0f!0028+0f!0028+0f!0024+0f5+0024+0f5+0021+0f3+004+0f!0021+0f3+004+0f!001b+0f6+007+0f!001b+0f6+007+0f!0017+0f4+00d+0f!0017+0f4+00d+0f!0015+0f2+0011+0f!0015+0f2+0011+0f!0013+0f2+0027+0f2+0013+",
   "playerSpriteSheetId": "d96ef8f0-96cf-4c5c-9f51-b5c2e508e02b"
 }

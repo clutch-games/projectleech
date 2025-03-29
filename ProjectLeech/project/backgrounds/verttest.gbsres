@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "3e55cf2e-cef8-4191-b5d3-c421941da0d6",
+  "name": "verttest",
+  "symbol": "bg_verttest",
+  "width": 20,
+  "height": 36,
+  "imageWidth": 160,
+  "imageHeight": 288,
+  "filename": "verttest.png",
+  "tileColors": ""
+}
