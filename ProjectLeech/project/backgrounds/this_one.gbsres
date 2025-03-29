@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "95a76119-938b-4ec3-a0d2-97ecf190b51a",
+  "name": "This one",
+  "symbol": "bg_this_one",
+  "width": 56,
+  "height": 28,
+  "imageWidth": 448,
+  "imageHeight": 224,
+  "filename": "This one.png",
+  "tileColors": "",
+  "autoColor": false
+}

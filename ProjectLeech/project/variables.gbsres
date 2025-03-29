@@ -1,0 +1,45 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "WeaponType",
+      "symbol": "var_weapontype_0"
+    },
+    {
+      "id": "2",
+      "name": "$PlayerDirection",
+      "symbol": "var_playerdirection"
+    },
+    {
+      "id": "3",
+      "name": "$Playerx",
+      "symbol": "var_playerx"
+    },
+    {
+      "id": "4",
+      "name": "$NewPlayerX",
+      "symbol": "var_newplayerx"
+    },
+    {
+      "id": "5",
+      "name": "PlayerHealth",
+      "symbol": "var_playerhealth"
+    },
+    {
+      "id": "6",
+      "name": "EnemyHealth",
+      "symbol": "var_enemyhealth"
+    },
+    {
+      "id": "7",
+      "name": "Skull Health",
+      "symbol": "var_skull_health"
+    },
+    {
+      "id": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
+    }
+  ]
+}
