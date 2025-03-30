@@ -1,0 +1,158 @@
+{
+  "_resourceType": "script",
+  "id": "571ffb0c-4502-4c95-ba7a-77109ae3570a",
+  "name": "Post-Hit Invincibility for Mort",
+  "description": "Invincibility and dying script",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_2",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "8"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_STOP",
+            "args": {},
+            "id": "98eb9e74-bdbc-473e-9d6c-7c8bba594013"
+          }
+        ],
+        "false": []
+      },
+      "id": "fdf22c89-778d-42a6-8891-2844eeb0318f"
+    },
+    {
+      "command": "EVENT_DEC_VALUE",
+      "args": {
+        "variable": "5",
+        "__collapse": false
+      },
+      "id": "968e76a8-4b96-4bb2-be42-b0c11f3bf8b3"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "5"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "beep",
+              "priority": "medium",
+              "pitch": 1,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0
+            },
+            "id": "c45e1c9c-faca-42a3-8e0d-5f7d6528068a"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 17
+              },
+              "direction": "right",
+              "fadeSpeed": 4
+            },
+            "id": "f04e58b1-53fe-4ef6-be6c-c7959e5c0539"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "8",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "69e6d2df-9fa9-48b6-96d8-b6691adf3dcb"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "beep",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0
+            },
+            "id": "c167df94-c4ff-4f75-b203-da41f666539b"
+          },
+          {
+            "command": "EVENT_ACTOR_EFFECTS",
+            "args": {
+              "effect": "flicker",
+              "actorId": "$self$",
+              "distance": 20,
+              "speed": 2,
+              "time": 2,
+              "frames": 30
+            },
+            "id": "55f1280b-39f5-4acd-856d-24cec7c2e9c8"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.001,
+              "frames": 30
+            },
+            "id": "6e1488ab-f040-44a1-99fe-e4f81ed76884"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "8",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "d51db52d-0795-4b86-a2ee-1b249946ed25"
+          }
+        ]
+      },
+      "id": "e89e31c2-a4cd-4052-9d56-148ac59a1fd9"
+    }
+  ]
+}

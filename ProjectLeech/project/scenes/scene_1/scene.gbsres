@@ -114,7 +114,7 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -195,7 +195,7 @@
                     "lifeTime": 0.3,
                     "loopAnim": true,
                     "destroyOnHit": true,
-                    "collisionGroup": "1",
+                    "collisionGroup": "3",
                     "collisionMask": [
                       "3"
                     ]
@@ -359,7 +359,7 @@
                                 "lifeTime": 1,
                                 "loopAnim": false,
                                 "destroyOnHit": true,
-                                "collisionGroup": "1",
+                                "collisionGroup": "3",
                                 "collisionMask": [
                                   "3"
                                 ]
@@ -443,7 +443,7 @@
                                 "lifeTime": 1,
                                 "loopAnim": false,
                                 "destroyOnHit": true,
-                                "collisionGroup": "1",
+                                "collisionGroup": "3",
                                 "collisionMask": [
                                   "3"
                                 ]
@@ -516,7 +516,7 @@
                           "lifeTime": 1,
                           "loopAnim": false,
                           "destroyOnHit": true,
-                          "collisionGroup": "1",
+                          "collisionGroup": "3",
                           "collisionMask": [
                             "3"
                           ]
@@ -582,10 +582,10 @@
         "variable": "8",
         "value": {
           "type": "number",
-          "value": 1
+          "value": 0
         }
       },
-      "id": "9e3f3fd7-d5b6-41d0-87a0-d40ef2e7e6d4"
+      "id": "6ada2ebf-e576-40ea-ab53-fc76a60b3b26"
     }
   ],
   "playerHit1Script": [],
@@ -605,19 +605,28 @@
             "value": 1
           }
         },
-        "__collapseElse": true
+        "__collapseElse": false,
+        "__collapse": false
       },
       "children": {
         "true": [
           {
             "command": "EVENT_STOP",
             "args": {},
-            "id": "bf8ff46f-b1a7-4a55-bb80-94e399776a0d"
+            "id": "efc81352-0661-495a-a604-ebf1dc92754b"
           }
         ],
         "false": []
       },
-      "id": "c5b408fe-b6da-44ce-9e5c-11da3fdf5e09"
+      "id": "fb78ea75-14f0-40ea-89c7-088d7bc3233e"
+    },
+    {
+      "command": "EVENT_DEC_VALUE",
+      "args": {
+        "variable": "5",
+        "__collapse": false
+      },
+      "id": "8c5e1743-e3b1-447b-970e-07b2a42fb6bd"
     },
     {
       "command": "EVENT_IF",
@@ -634,22 +643,10 @@
           }
         },
         "__collapseElse": false,
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
-          {
-            "command": "EVENT_ACTOR_EFFECTS",
-            "args": {
-              "effect": "flicker",
-              "actorId": "$self$",
-              "distance": 20,
-              "speed": 2,
-              "time": 0.2,
-              "frames": 30
-            },
-            "id": "e64db35a-5487-4908-9c62-f1c775334d7b"
-          },
           {
             "command": "EVENT_SOUND_PLAY_EFFECT",
             "args": {
@@ -669,11 +666,11 @@
               "sceneId": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a",
               "x": {
                 "type": "number",
-                "value": 0
+                "value": 1
               },
               "y": {
                 "type": "number",
-                "value": 17
+                "value": 15
               },
               "direction": "right",
               "fadeSpeed": 4
@@ -681,11 +678,67 @@
             "id": "134b3481-a2ad-4020-988f-b99bdf0a3ce5"
           }
         ],
-        "false": []
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "8",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "2be8352d-5ea6-4cb6-85d4-a918ec7646a6"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "beep",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0
+            },
+            "id": "4841a4af-0f19-4c37-b4ce-3cdda1c60af3"
+          },
+          {
+            "command": "EVENT_ACTOR_EFFECTS",
+            "args": {
+              "effect": "flicker",
+              "actorId": "$self$",
+              "distance": 20,
+              "speed": 2,
+              "time": 2,
+              "frames": 30
+            },
+            "id": "122e04fe-d7d6-4f47-9c8b-004b2785158b"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.001,
+              "frames": 30
+            },
+            "id": "e93826cb-9da6-4319-bcab-2779964148b5"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "8",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "153f7fe1-3729-4dc2-bad0-bb13db5d1edb"
+          }
+        ]
       },
       "id": "6a503875-39f5-4299-88d1-aff97a91c284"
     }
   ],
-  "collisions": "0f2a+0026+0f3+0028+0f!0028+0f!0028+0f!0028+0f!0024+0f5+0024+0f5+0021+0f3+004+0f!0021+0f3+004+0f!001b+0f6+007+0f!001b+0f6+007+0f!0017+0f4+00d+0f!0017+0f4+00d+0f!0015+0f2+0011+0f!0015+0f2+0011+0f!0013+0f2+0027+0f2+0013+",
+  "collisions": "0f2a+0028+0f!0028+0f!0028+0f!0028+0f!0024+0f5+0024+0f5+0021+0f8+0021+0f3+004+0f!001b+0f9+004+0f!001b+0f6+007+0f!0017+0fa+007+0f!0017+0f4+00d+0f!0015+0f6+00d+0f!0015+0f2+0011+0f!0013+0f4+0011+0f!0013+0f2+0014+0f15+0013+",
   "playerSpriteSheetId": "d96ef8f0-96cf-4c5c-9f51-b5c2e508e02b"
 }

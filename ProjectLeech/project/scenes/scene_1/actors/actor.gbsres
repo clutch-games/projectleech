@@ -27,6 +27,17 @@
         }
       },
       "id": "d550306b-d99e-412b-9a76-1632b86bd671"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "11",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "25960081-08a4-45d5-87ba-a9aa504534ca"
     }
   ],
   "updateScript": [
@@ -149,7 +160,73 @@
   ],
   "hit1Script": [],
   "hit2Script": [],
-  "hit3Script": [],
+  "hit3Script": [
+    {
+      "command": "EVENT_DEC_VALUE",
+      "args": {
+        "variable": "11",
+        "__collapse": true
+      },
+      "id": "660089d8-dd5d-4edc-9900-921aaffc76ca"
+    },
+    {
+      "command": "EVENT_SOUND_PLAY_EFFECT",
+      "args": {
+        "type": "beep",
+        "priority": "medium",
+        "pitch": 1,
+        "frequency": 200,
+        "duration": 0.1,
+        "wait": true,
+        "effect": 0,
+        "__collapse": true
+      },
+      "id": "53478a0d-e7f2-411e-8a3b-6bec2ba710e9"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "11"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "aea45d31-ce1d-4603-9c9d-d95769579948"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "crash",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "3bb79995-5e68-4b90-817c-e118964d3aba"
+          }
+        ],
+        "false": []
+      },
+      "id": "df27a639-cb26-49e2-9af8-8d9daf882911"
+    }
+  ],
   "x": 18,
   "y": 17,
   "_index": 0
