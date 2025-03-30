@@ -197,7 +197,8 @@
             "value": 0
           }
         },
-        "__collapseElse": true
+        "__collapseElse": true,
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -225,6 +226,79 @@
         "false": []
       },
       "id": "df27a639-cb26-49e2-9af8-8d9daf882911"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "player",
+        "vectorX": "12",
+        "vectorY": "13",
+        "__collapse": false
+      },
+      "id": "72413c29-2930-4e24-8ff5-53dbbf0910de"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "14",
+        "vectorY": "15"
+      },
+      "id": "dd3df4b0-e1ba-4d22-b260-93fee8966427"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "expression",
+            "value": "$14$"
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 4
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "edef92b9-8854-45e1-877e-009dce2f6302"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": -4
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "e08873ba-79b0-4b7e-9700-2692fd211d92"
+          }
+        ]
+      },
+      "id": "00db6f46-005e-4387-9540-6d8489f58b9b"
     }
   ],
   "x": 18,

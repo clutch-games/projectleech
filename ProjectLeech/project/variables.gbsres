@@ -14,7 +14,7 @@
     {
       "id": "3",
       "name": "$Playerx",
-      "symbol": "var_playerx"
+      "symbol": "var_playerx_0"
     },
     {
       "id": "4",
@@ -47,11 +47,6 @@
       "symbol": "var_invincibility_timer"
     },
     {
-      "id": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a__L0",
-      "name": "Local 0",
-      "symbol": "var_local_0"
-    },
-    {
       "id": "10",
       "name": "PlayerHit",
       "symbol": "var_playerhit"
@@ -60,6 +55,31 @@
       "id": "11",
       "name": "ZombieHealth",
       "symbol": "var_zombiehealth"
+    },
+    {
+      "id": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
+    },
+    {
+      "id": "12",
+      "name": "player_x",
+      "symbol": "var_player_x"
+    },
+    {
+      "id": "13",
+      "name": "player_y",
+      "symbol": "var_player_y"
+    },
+    {
+      "id": "14",
+      "name": "enemy_x",
+      "symbol": "var_enemy_x"
+    },
+    {
+      "id": "15",
+      "name": "enemy_y",
+      "symbol": "var_enemy_y"
     }
   ]
 }
