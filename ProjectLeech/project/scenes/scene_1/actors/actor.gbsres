@@ -162,10 +162,30 @@
   "hit2Script": [],
   "hit3Script": [
     {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "11",
+        "value": {
+          "type": "sub",
+          "valueA": {
+            "type": "variable",
+            "value": "11"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "16"
+          }
+        },
+        "__collapse": true
+      },
+      "id": "564d318e-c107-41c9-b5db-9ee9c06100b2"
+    },
+    {
       "command": "EVENT_DEC_VALUE",
       "args": {
         "variable": "11",
-        "__collapse": true
+        "__collapse": false,
+        "__comment": true
       },
       "id": "660089d8-dd5d-4edc-9900-921aaffc76ca"
     },
@@ -233,7 +253,7 @@
         "actorId": "player",
         "vectorX": "12",
         "vectorY": "13",
-        "__collapse": false
+        "__collapse": true
       },
       "id": "72413c29-2930-4e24-8ff5-53dbbf0910de"
     },
@@ -242,7 +262,8 @@
       "args": {
         "actorId": "$self$",
         "vectorX": "14",
-        "vectorY": "15"
+        "vectorY": "15",
+        "__collapse": true
       },
       "id": "dd3df4b0-e1ba-4d22-b260-93fee8966427"
     },
@@ -260,7 +281,8 @@
             "value": "$14$"
           }
         },
-        "__collapseElse": false
+        "__collapseElse": false,
+        "__collapse": true
       },
       "children": {
         "true": [

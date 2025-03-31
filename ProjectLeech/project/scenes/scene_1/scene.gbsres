@@ -198,9 +198,21 @@
                     "collisionGroup": "3",
                     "collisionMask": [
                       "3"
-                    ]
+                    ],
+                    "__collapse": false
                   },
                   "id": "e0fcc613-cd24-4d19-a165-ffaf1edf8bbc"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "16",
+                    "value": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  },
+                  "id": "a810b45e-6fe5-4116-83fb-283ee0f6541a"
                 },
                 {
                   "command": "EVENT_ACTOR_SET_STATE",
@@ -290,7 +302,7 @@
                       {
                         "command": "FO_EVENT_CUSTOM_PROJECTILE",
                         "args": {
-                          "tabs": "default",
+                          "tabs": "general",
                           "lifetime": false,
                           "bounds": false,
                           "ignore": false,
@@ -365,6 +377,18 @@
                                 ]
                               },
                               "id": "dfd3883f-92ef-4ca2-9dc7-e8afc55135e1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "16",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "__collapse": false
+                              },
+                              "id": "32f7ec55-6d81-4279-9c3b-845256fb1312"
                             }
                           ],
                           "false": []
@@ -374,7 +398,7 @@
                       {
                         "command": "FO_EVENT_CUSTOM_PROJECTILE",
                         "args": {
-                          "tabs": "default",
+                          "tabs": "general",
                           "lifetime": false,
                           "bounds": false,
                           "ignore": false,
@@ -449,6 +473,17 @@
                                 ]
                               },
                               "id": "dd05daf1-07ee-42ac-9c98-b49f7e28b8fa"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "16",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1
+                                }
+                              },
+                              "id": "2a16d90d-f769-45ad-923d-32b42338f79c"
                             }
                           ],
                           "false": []
@@ -522,6 +557,17 @@
                           ]
                         },
                         "id": "323c034a-0613-46ad-a395-7c2a4f4283db"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "16",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "834f9957-d54e-494a-a3b5-84fbd3e9ab69"
                       }
                     ]
                   },
