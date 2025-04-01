@@ -16,6 +16,10 @@
     {
       "id": "plat_dec",
       "value": 483
+    },
+    {
+      "id": "plat_air_control",
+      "value": 1
     }
   ]
 }
