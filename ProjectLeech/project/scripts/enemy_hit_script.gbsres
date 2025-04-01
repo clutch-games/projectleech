@@ -1,0 +1,172 @@
+{
+  "_resourceType": "script",
+  "id": "f7630020-7e8f-4279-be4e-0f6813f3c6b7",
+  "name": "Enemy Hit Script",
+  "description": "Zombie Hit Script",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_3",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "11",
+        "value": {
+          "type": "sub",
+          "valueA": {
+            "type": "variable",
+            "value": "11"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "16"
+          }
+        },
+        "__collapse": true
+      },
+      "id": "2a7163f5-df51-4d33-96d6-30756e0e2c7a"
+    },
+    {
+      "command": "EVENT_DEC_VALUE",
+      "args": {
+        "variable": "11",
+        "__collapse": false,
+        "__comment": true
+      },
+      "id": "6cc5340f-b25a-41ac-955e-635f8a1be6bb"
+    },
+    {
+      "command": "EVENT_SOUND_PLAY_EFFECT",
+      "args": {
+        "type": "beep",
+        "priority": "medium",
+        "pitch": 1,
+        "frequency": 200,
+        "duration": 0.1,
+        "wait": true,
+        "effect": 0,
+        "__collapse": true
+      },
+      "id": "d6037603-f634-4492-8668-e79197ab887b"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "11"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "e00913cc-c183-4543-a79d-afbbfb6b2e4a"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "crash",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "b13cf1a9-58f4-439f-a59f-ff9f2bf5961f"
+          }
+        ],
+        "false": []
+      },
+      "id": "8308da2b-1b5c-4421-8d59-ce78661c6e84"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "player",
+        "vectorX": "12",
+        "vectorY": "13",
+        "__collapse": true
+      },
+      "id": "8986e38b-ccb3-45bf-aaef-5bd7e11a6f98"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "14",
+        "vectorY": "15",
+        "__collapse": true
+      },
+      "id": "2c8a8ee4-2fff-4dd9-9722-404b53cf5f63"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "expression",
+            "value": "$14$"
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 4
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "3a677b9a-c17c-4ced-a386-976e380c2cae"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": -4
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "7d046123-445e-499e-b32c-d91ec04c0fc4"
+          }
+        ]
+      },
+      "id": "0acf1cb1-6708-4c2f-ba04-d87183c435ba"
+    }
+  ]
+}

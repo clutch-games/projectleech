@@ -632,6 +632,74 @@
         }
       },
       "id": "6ada2ebf-e576-40ea-ab53-fc76a60b3b26"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "right",
+          "left"
+        ],
+        "override": false,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_INPUT",
+            "args": {
+              "input": [
+                "left"
+              ],
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_DIRECTION",
+                  "args": {
+                    "actorId": "$self$",
+                    "direction": {
+                      "type": "direction",
+                      "value": "left"
+                    }
+                  },
+                  "id": "5c0283b6-bb5c-4761-8f89-24007880a193"
+                }
+              ],
+              "false": []
+            },
+            "id": "971d6e08-9838-4f04-bace-c42b6c3d9c4a"
+          },
+          {
+            "command": "EVENT_IF_INPUT",
+            "args": {
+              "input": [
+                "right"
+              ],
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_DIRECTION",
+                  "args": {
+                    "actorId": "$self$",
+                    "direction": {
+                      "type": "direction",
+                      "value": "right"
+                    }
+                  },
+                  "id": "44b79d6e-57c6-4929-b2c6-35cd265e79d4"
+                }
+              ],
+              "false": []
+            },
+            "id": "80b01e42-f9f6-4405-8fdd-a9fa99734cbb"
+          }
+        ]
+      },
+      "id": "8b8cc227-308c-45ee-8c12-1dc33d3e81a6"
     }
   ],
   "playerHit1Script": [],
