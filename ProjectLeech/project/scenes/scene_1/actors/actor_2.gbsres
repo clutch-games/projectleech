@@ -58,7 +58,7 @@
                     "death": 0,
                     "varX": "L0",
                     "varY": "L0",
-                    "projectile": 6,
+                    "projectile": 0,
                     "arc_height": 50,
                     "distance": 2,
                     "amplitude": 30,
@@ -76,7 +76,7 @@
                     "dir_offset": 0,
                     "customX": "L0",
                     "customY": "L0",
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "children": {
                     "script": []
