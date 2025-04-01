@@ -82,11 +82,6 @@
       "symbol": "var_projectiledamage"
     },
     {
-      "id": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a__L0",
-      "name": "Local 0",
-      "symbol": "var_local_0"
-    },
-    {
       "id": "17",
       "name": "Enemy Cooldown",
       "symbol": "var_enemy_cooldown"
@@ -95,6 +90,11 @@
       "id": "18",
       "name": "EnemyAlive",
       "symbol": "var_enemyalive"
+    },
+    {
+      "id": "ee2dd2b1-a2e9-45ee-aa3f-48e0f706274a__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
     }
   ]
 }
