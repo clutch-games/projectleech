@@ -156,7 +156,7 @@
           "type": "sub",
           "valueA": {
             "type": "variable",
-            "value": "11"
+            "value": "7"
           },
           "valueB": {
             "type": "variable",
