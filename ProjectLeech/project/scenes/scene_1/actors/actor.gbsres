@@ -328,7 +328,7 @@
                   "command": "EVENT_GROUP",
                   "args": {
                     "__label": "Jump Right",
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
@@ -342,9 +342,9 @@
                           },
                           "y": {
                             "type": "number",
-                            "value": -2
+                            "value": -1
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "45ae55ca-0f5d-495a-87c1-0224d8950080"
                       },
@@ -416,7 +416,7 @@
                           },
                           "y": {
                             "type": "number",
-                            "value": 2
+                            "value": 1
                           }
                         },
                         "id": "d05eeadd-f857-4dd7-a1aa-864136288364"
@@ -441,7 +441,7 @@
                   "command": "EVENT_GROUP",
                   "args": {
                     "__label": "Jump Left",
-                    "__collapse": true
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
@@ -455,7 +455,7 @@
                           },
                           "y": {
                             "type": "number",
-                            "value": -2
+                            "value": -1
                           },
                           "__collapse": false
                         },
@@ -529,7 +529,7 @@
                           },
                           "y": {
                             "type": "number",
-                            "value": 2
+                            "value": 1
                           }
                         },
                         "id": "5900db8f-cc61-43f2-8f93-cfaa8d20d104"
